@@ -56,39 +56,14 @@
       </div>
     
   </header><!-- End Header -->
-  <br>
+ <br>
   <div style="width:100%; margin-top: 5%; height: 400px;  background-color: lightgray; ">
     
-    <video id="video" width="100%" height="400" src="https://www.youtube.com/embed/AanN0QHMJmI?si=eK7J3JL9geTTSZDo"  autoplay></video>
-    <script src="script.js"> </script>
-
-<script type="text/javascript">
-  // script.js
-async function startLiveStream() {
-    try {
-        // Check if the browser supports getUserMedia
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Request access to the camera
-            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-            // Get the video element
-            const video = document.getElementById('video');
-            // Set the source of the video element to the stream
-            video.srcObject = stream;
-        } else {
-            alert('getUserMedia is not supported in this browser.');
-        }
-    } catch (error) {
-        console.error('Error accessing the camera: ', error);
-    }
-}
-// Start the live stream when the page loads
-window.addEventListener('load', startLiveStream);
-</script>
-
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/AanN0QHMJmI?si=eK7J3JL9geTTSZDo" ></iframe>
 
       </div>
-        <!--  <div style="background-color: black; width:25%;  margin-top:-17%; margin-left: 40%;">Ntabiri Guhita</div>
-  -->
+         <div style="background-color: black; width:25%;  margin-top:-17%; margin-left: 40%;">Ntabiri Guhita</div>
+ 
  <div class="footer-legal">
   <div class="container">
     <div class="copyright" style="text-align:center;">
