@@ -15,14 +15,14 @@
   
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons.css" rel="stylesheet">
+  <link href="aos.css" rel="stylesheet">
+  <link href="glightbox.min.css" rel="stylesheet">
+  <link href="swiper-bundle.min.css" rel="stylesheet">
+  <link href="remixicon.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap-icons.css" rel="stylesheet">
   
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -37,7 +37,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a  href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo_blanc_v2.png" alt="SmartWorkers team">
+        <img src="logo_blanc_v2.png" alt="SmartWorkers team">
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -130,3 +130,22 @@
     </div>
   </section>
   <!-- end category section -->
+    <!-- Vendor JS Files -->
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="aos.js"></script>
+  <script src="glightbox.min.js"></script>
+  <script src="swiper-bundle.min.js"></script>
+  <script src="isotope.pkgd.min.js"></script>
+  <script src="validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="main.js"></script>
+  <script>
+    function showToast(message){
+      const toastContent =  document.querySelector('.toast'); 
+      const toast = new bootstrap.Toast(toastContent);
+      document.getElementById('toast-body').innerHTML = message;
+      toast.show();
+    }  
+  </script>
+</body>
