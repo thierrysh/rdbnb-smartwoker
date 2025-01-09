@@ -31,7 +31,25 @@
   
 </head>
 
-
+<form action="<?php echo $_SEVER['PHP_SELF'] ; ?>" method="POST">
+     <label><input type="radio" value="nl" name="language"> NL</label>
+     <label><input type="radio" value="de" name="language"> DE</label>
+     <label><input type="radio" value="en" name="language"> EN</label>
+<input type="submit" value="Ok" />
+</form>
+<ul id='languageSelection'>
+<?php
+          foreach($languages as $language) {
+                if(!$page->viewable($language)) continue; // check if page not published for this language
+                
+                $class = "$language" == "$user->language" ? "active" : "";
+                $url = $page->localUrl($language);
+                $lang = $language->name;
+                   if(strcmp($lang,'default') == 0) { $lang = 'nl'; } // default language fix
+                echo "<li class='$class'><a title='$language->title' href='$url'>$lang</a></li>";
+          }
+</ul>  
+  
 <body style="background-color:  #154360;">
     
  <header style="background-color: white;" id="header" class="header d-flex align-items-center fixed-top">
